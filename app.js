@@ -44,7 +44,7 @@ app.post("/todos/", async (request, response) => {
   INSERT INTO
     todo
   VALUES
-    (${id}, '${todo}', '${isChecked}');`;
+    ('${id}', '${todo}', '${isChecked}');`;
   await database.run(postTodoQuery);
   const success = {
     status: 200,
@@ -59,7 +59,7 @@ app.delete("/todos/:todoId/", async (request, response) => {
   DELETE FROM
     todo
   WHERE
-    id = ${todoId};`;
+    id = '${todoId}';`;
 
   await database.run(deleteTodoQuery);
   const success = {

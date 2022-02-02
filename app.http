@@ -7,11 +7,11 @@ POST http://localhost:3000/todos/
 Content-Type: application/json
 
 {
-    "id":4,
+    "id":"three",
     "todo":"I am Uday",
     "isChecked":"false"
 }
 
 ###
 
-DELETE http://localhost:3000/todos/4/
+DELETE http://localhost:3000/todos/three/
